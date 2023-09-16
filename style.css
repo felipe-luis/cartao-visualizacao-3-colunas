@@ -9,8 +9,13 @@
 
 :root{
     --bg1:hsl(31, 77%, 52%);
+    --text1:hsl(31, 77%, 52%);
+
     --bg2:hsl(184, 100%, 22%);
+    --text2:hsl(184, 100%, 22%);
+
     --bg3: hsl(179, 100%, 13%);
+    --text3: hsl(179, 100%, 13%);
 
     font-size: 62.5%;
 }
@@ -29,12 +34,19 @@ body {
 
 h2 {
     font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 3rem;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
 
+    margin: 2rem 0;
 }
 
-button{
-    font-family: 'Lexend Deca', sans-serif;
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 10rem;
+    line-height: 2.6rem;
 }
+
 
 .container {
     max-width: 960px;
@@ -44,10 +56,20 @@ button{
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.box {
+    padding: 4rem;
 }
 
 .box1 {
     background-color: var(--bg1);
+}
+.box1 a{
+    color: var(--text1);
 }
 
 .box2{
@@ -55,6 +77,51 @@ button{
 
 }
 
+.box2 a{
+    color: var(--text2);
+}
+
 .box3{
     background-color: var(--bg3);
 }
+
+.box3 a{
+    color: var(--text3);
+}
+
+
+a{
+    font-family: 'Lexend Deca', sans-serif;
+    border-radius: 4rem;
+    border: none;
+    background-color: hsl(0, 0%, 95%);
+    padding: 1.5rem 2rem;
+
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+a:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 95%);
+    color: hsla(0, 0%, 100%, 0.75);
+    
+}
+
+@media only screen and (max-width: 768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .wrapper{
+        margin: 2rem 1rem;
+    }
+}
+
+
+
+
+
